@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Voting - Decentralized Voting Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+  </head>
+  <body>
+    <div id="head">
+      <h1>Decentralized Voting Platform</h1>
+      <h2>Cast Your Vote</h2>
+      <h3><p>Voting Period: <span id="dates">Loading...</span></p></h3>
+    </div>
+
+    <div id="loadingIndicator" class="loading-container" style="display: none;">
+      <div class="loading-spinner"></div>
+      <p>Connecting to blockchain...</p>
+    </div>
+
+    <div id="candidate" class="container" style="display: none;"> 
+      <div class="section-header">
+        <h2>Candidates</h2>
+        <p>Select your preferred candidate</p>
+      </div>
+      <div class="table-wrapper">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Select</th>
+              <th>Name</th>
+              <th>Party</th>
+              <th>Votes</th>
+            </tr>
+          </thead>
+          <tbody id="boxCandidate"></tbody>
+        </table>
+      </div>
+      
+      <div id="vote">
+        <p class="vote-instruction">Please select one of the candidates above and click the vote button.</p>
+        <button id="voteButton" class="btn btn-primary" onclick="App.vote()" disabled>
+          <span class="button-text">Cast Vote</span>
+        </button>
+        <div id="msg"></div>
+      </div>
+    </div>
+  
+    <div id="account">
+      <p id="accountAddress"></p>
+    </div>
+
+    <div id="notificationContainer"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="../dist/app.bundle.js" type="module"></script>
+  </body>
+</html>

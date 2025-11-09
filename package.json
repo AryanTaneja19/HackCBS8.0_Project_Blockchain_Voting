@@ -1,0 +1,27 @@
+{
+  "name": "decentralized-voting",
+  "version": "1.0.0",
+  "description": "Blockchain-based decentralized voting DApp with FastAPI backend and Ethereum smart contract integration.",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify ./src/js/app.js -o ./src/dist/app.bundle.js -t [ babelify --presets [ @babel/preset-env ] ]",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aryan Taneja",
+  "license": "ISC",
+  "dependencies": {
+    "@truffle/contract": "^4.6.18",
+    "browserify": "^17.0.0",
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "web3": "^1.9.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
+    "babelify": "^10.0.0"
+  }
+}
